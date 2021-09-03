@@ -82,7 +82,7 @@ const displayCount = numOfResults => {
     if (numOfResults > 0) {
         const searchCountDiv = document.createElement('div');
         searchCountDiv.innerHTML = `
-    <div class="mt-5 mb-3"><h1 class="text-center text-danger fw-bold">Showing first 30 results out of ${numOfResults} results.<h1></div>`
+    <div class="mt-5 mb-3"><h3 class="text-center text-danger fw-bold">Showing first 30 results out of ${numOfResults} results.<h3></div>`
         countContainer.appendChild(searchCountDiv);
     } else {
         errorMessage();
