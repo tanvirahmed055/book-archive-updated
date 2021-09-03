@@ -5,11 +5,74 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Book Archive Website</title>
+    <!-- bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- external css -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="bg-light bg-gradient">
+    <main>
+        <section class="container">
+            <div class="m-5">
+                <h3 class="text-center text-success mb-4 fw-bold">Search Your Favorite Book</h3>
+                <!-- book search area -->
+                <form class="d-flex m-auto w-75">
+                    <input class="form-control me-2" type="search" placeholder="Search Book" aria-label="Search"
+                        id="input-value" />
+                    <button class="btn btn-outline-primary" type="submit" id="submit-btn">
+                        Search
+                    </button>
+                </form>
 
+                <!-- spinner start -->
+                <div class="d-flex justify-content-center mt-5 d-none" id="spinner">
+                    <div class="spinner-grow text-primary" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <div class="spinner-grow text-secondary" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <div class="spinner-grow text-success" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <div class="spinner-grow text-danger" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <div class="spinner-grow text-warning" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <div class="spinner-grow text-info" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <div class="spinner-grow text-light" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <div class="spinner-grow text-dark" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </div>
+            </div>
+            <!-- spinner end -->
+
+            <!-- error message div -->
+            <div id="error-message"></div>
+
+            <!-- count search result div -->
+            <div class="my-5" id="count-detail"></div>
+
+            <!-- all books result div -->
+            <div class="row row-cols-1 row-cols-md-3 g-4 mb-5" id="book-items"></div>
+        </section>
+    </main>
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <!-- external script file-->
+    <script src="js/search-books.js"></script>
 </body>
 
 </html>
