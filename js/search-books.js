@@ -51,13 +51,16 @@ const bookCardDiv = url => {
 
                 bookDiv.classList.add = "col";
 
-                bookDiv.innerHTML = `<div class="card h-100 shadow rounded p-3">
+                bookDiv.innerHTML = `<div class="card h-100 shadow rounded p-3 bg-light">
                 <img src="https://covers.openlibrary.org/b/id/${cover_i ? cover_i : 10909258}-M.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
-                  <h5 class="card-title fw-bolder">Book Name: ${title ? title : 'No Book Name Found'}</h5>
+                  <h5 class="card-title fw-bolder text-decoration-underline text-secondary">Book Name: ${title ? title : 'No Book Name Found'}</h5>
                   <p class="card-text fw-bold">Author Name: ${author_name ? author_name.slice(0, 10) : 'No Author Name Found'}</p>
                   <p class="card-text fw-bold">Published Year: ${element.first_publish_year ? first_publish_year : 'No Publish Year Found'}</p>
                   <p class="card-text fw-bold">Publisher Name: ${publisher ? publisher.slice(0, 5) : 'No Publisher Name Found'}</p>               
+                </div>
+                <div class="d-grid gap-2">
+                   <button class="btn btn-primary" type="button">Read Online</button>
                 </div>
               </div>`
                 bookContainer.appendChild(bookDiv);
